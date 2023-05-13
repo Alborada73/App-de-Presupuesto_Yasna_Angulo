@@ -1,26 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>App_Presupuesto</title>
 </head>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-<body>
-    <h1>APP PRESUPUESTO</h1>
-    <tr> El objetivo de este programa es ayudar a tus usuarios a administrar sus finanzas, de
-        una forma que sea sencilla de visualizar. </tr>
-    <main class="container">
-        <div class="row">
-            <div class="col-4 offset-4"></div>
-        </div>
-    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>"
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+<body>
+
+    <h2>PRESUPUESTO APP</h2>
+    <section class="col-6 col-md-5">
+    <form method="post" action=""></form>
+    <table class="table table-borderer">
+        <thead>
+            <tr class="table-success">
+                <td>
+                    <div id="ingresa tu presupuesto">
+                        <label for="presupuesto">Ingresa Tu Presupuesto:</label>
+                    </div>
+                    <div><input id="presupuesto" type="number" name="presupuesto" required></div><br>
+                    <button type="submit" class="btn btn-success">Calcular</button>
+                </td>
+    </section>
+
+    <section class="col-6 col-md-5">
+    </table>
+        <table>
+                <td>
+                    <div class="col-2 col-md-5"><label for="presupuesto">Presupuesto</label></div>
+                    <p>&#36;</p>
+                    <div>
+                        <id="presupuesto" type="text" numero="$0">
+                    </div><br>
+                </td>
+
+                <td>
+                    <div col-2 col-md-5><label for="gasto">Gasto</label></div>
+                    <p>&#36;</p>
+                    <div>
+                        <id="gasto" type="number">
+                    </div><br>
+                </td>
+
+                <td>
+                    <div col-2 col-md-5><label for="saldo">Saldo</label></div>
+                    <p>&#36;</p>
+                    <div>
+                        <id="saldo" type="text" numero="$0">
+                    </div><br>
+                </td>
+    </section>
+            </tr>
+        </table>
+        </thead>
+    </table>
+
+    <table class="table table-borderer" width="0%" align="center" border="0" color="">
+        <thead>
+            <tr class="table-danger">
+                <td>
+                    <div class="row">
+                        <div id="ingresa el nombre del gasto" class="col-4 col-sm-4"></div><label for="nombre">Ingresa
+                            el Nombre del Gasto</label>
+                    </div>
+                    <div><input id="nombre" type="text"></div>
+                </td>
+
+                <td>
+                    <div><label for="gasto">Gasto</label></div>
+                    <p></p>
+                    <div>
+                        <id="gasto" type="text" numero="$0">
+                    </div>
+                </td>
+
+                <td>
+                    <div><label for="valor">Valor</label></div>
+                    <p></p>
+                    <div>
+                        <id="valor" type="text" valor="$0">
+                    </div>
+                </td>
+        </thead>
+        <br>
+        <table class="table table-borderer" width="0%" align="center" border="0" color="--bs-success-border-subtle">
+            <thead>
+                <tr class="table-danger">
+                    <td>
+                        <div id="ingresa la cantidad del gasto"><label for="gasto">Ingresa la Cantidad del
+                                Gasto</label>
+                        </div>
+                        <div><input id="gasto" type="number"></div><br>
+                        <button type="submit" class="btn btn-danger">Añadir Gasto</button>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+        </form>
+
+
+        <main>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="assets/js/main.js"></script>
+
+        <p id="saldo"></p>
+        <script>
+            function calcular() {
+                var nombredelGasto = document.getElementById("nombredelGasto").value;
+                var presupuesto = document.getElementById("presupuesto").value;
+                var gasto = document.getElementById("gasto").value;
+
+                var saldo = presupuesto - gasto;
+
+                document.getElementById("saldo").innerHTML = nombredelGasto + ",presupuesto" + saldo + ".";
+
+
+            }
+        </script>
+
 </body>
+
 </html>

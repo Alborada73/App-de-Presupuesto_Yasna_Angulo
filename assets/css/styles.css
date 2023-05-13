@@ -1,0 +1,26 @@
+#ingresaTuPresupuesto{
+  border: 1px black;
+  display: inline-block;
+  padding: 18px;
+}
+
+#ingresaelnombredelgasto{
+  border: 1px black;
+  display: inline-block;
+  padding: 18px;
+  width: 100px;
+  height: 200px;
+}
+
+#ingresalacantidaddelgasto{
+  border: 1px black;
+  display: inline-block;
+  padding: 18px;
+  width: 100px;
+  height: 200px;
+
+}
+
+
+
+ 
